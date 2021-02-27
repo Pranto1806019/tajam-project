@@ -10,47 +10,53 @@ ul,li{
     list-style-type: none;
 }
 .container{
-    width: 940px;
+    width: 960px;
     margin : 0 auto;
 }
 .clr{
     clear: both;
 }
 /* nav part css goes here */
-#navbar{
+nav{
     width: 100%;
     position : fixed;
     top : 0;
     left : 0;
     z-index: 999;
+    background: transparent;
 }
 .nav-menu{
     display: flex;
-    justify-content: space-between;
 }
 .logo{
-    width: 140px;
-    padding-top: 16px;
+    width: 180px;
+    
 }
-li{
+.logo img{
+    padding-top: 15px;
+}
+
+.nav-link ul li{
     display: inline-block;
+    padding-left: 25px;
 }
 
 .nav-link{
-    width: 540px;
-    line-height: 70px;
+    width: 760px;
+    text-align: right;
 }
 .nav-link ul li a{
-    padding-left: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
-    font-weight: 600;
-    color: #fff;
+    font-weight: 900; 
     text-transform: uppercase;
-    line-height: 25px;
+    line-height: 80px;
     transition: all linear 0.3s;
+    color : #fff; 
+    
 }
-.nav-link ul li a:hover{
+
+.nav-link ul li:hover{
     color : #00e0d0;
 }
 /* banner part css goes here */
@@ -64,13 +70,24 @@ li{
 } */
 #banner{
     position: relative;
-}
-.banner-img img{
+    background: url(../images/banner.png) no-repeat center;
     width: 100%;
-
+    height: 100vh;
+    background-size: cover;
+}
+.banner-overlay{
+    background-image: linear-gradient(to right, rgba(9, 5, 47,0.8) , rgba(49, 29, 94,0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 .banner-text{
     text-align: center;
+    align-self: center;
 }
 .banner-text h1{
     font-family: 'Playfair Display', serif;
@@ -120,24 +137,26 @@ li{
     padding-bottom: 100px;
 
 }
-.banner-overlay{
-    background-image: linear-gradient(to right, rgba(9, 5, 47,0.8) , rgba(49, 29, 94,0.8));
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 99%;
-}
+
 .dot{
     padding-top: 125px;
     padding-left: 450px;
 }
+#banner .banner-text ul {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .dot ul li{
+    display: inline-block;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
     background: transparent;
-    border : 1px solid #9996a2;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 1px;
 }  
 ul li.active{
     background: #00e0d0;
@@ -183,21 +202,20 @@ ul li.active{
 }
 /* story watch css goes here */
 #watch{
-    position: relative;
+    background: url(../images/3rd-section.png) no-repeat center;
+    background-size: cover;
 }
-.watch-img{
 
-}
 .watch-overlay{
     background-image: linear-gradient(to right, rgba(9, 5, 47,0.8) , rgba(49, 29, 94,0.8));
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 99%;
+    height: 100%;
+    padding : 202px 0px;
 }
 .play{
-    padding : 200px 0px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -282,25 +300,25 @@ ul li.active{
     text-align: center;
     padding : 0px 30px;
 }
+.ex{
+    padding-top: 10px!important;
+}
 /* team part css goes here */
 #team{
-
-}
-.team-img{
-   width: 100%;
-   position: relative; 
+    background: url(../images/join-banner.png) no-repeat center;
+    background-size: cover;
 }
 .team-overlay{
     background-image: linear-gradient(to right, rgba(9, 5, 47,0.8) , rgba(49, 29, 94,0.8));
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 99.5%;
+    height: 100%;
+    padding: 70px 0;
 }
 .team-head{
     text-align: center;
-    padding-top: 70px;
+   
 }
 .team-head h3{
     font-family: 'Playfair Display', serif;
@@ -461,23 +479,21 @@ ul li.active{
 }
 /* comma section css goes here */
 #comma{
+    background: url(../images/comma-section-img.png) no-repeat center;
+    background-size: cover;
+}
 
-}
-.comma-img{
-    position: relative;
-    width: 100%;
-}
 .comma-overlay{
     background-image: linear-gradient(to right, rgba(9, 5, 47,0.8) , rgba(49, 29, 94,0.8));
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 99%;
+    padding: 118px 0 76px 0;
+    text-align: center;    
 }
 .comma-part{
-    text-align: center;
-    padding-top: 90px;
+    
 }
 .comma-part p{
     color : #e0dfe5;
@@ -485,21 +501,20 @@ ul li.active{
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    padding: 0 385px;
-    padding-top: 50px;
-    padding-bottom: 0px;
+    margin: 0 auto;
+    width: 800px;
+    padding-top: 42px;
 }
 .comma-text{
     text-align: center;
 }
 .comma-text h2{
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 14px;
     text-transform: uppercase;
     color : #fff;
-    padding-top: 45px;
-    padding-bottom: 7px;
+    padding-top: 36px;
 }
 .comma-text h3{
     font-family: 'Roboto', sans-serif;
@@ -507,27 +522,33 @@ ul li.active{
     font-size: 13px;
     color : #bcb9c6;
     text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 43px;
 }
-.circle{
+/* .circle{
     text-align: center;
-}
+} */
 .circle ul li{
     height: 21px;
     width: 21px;
     border-radius: 50%;
     background: #fff;
-    margin: 30px 14px;
-    margin-bottom: 60px;
+    margin: 0 8px;
+    display: inline-block;
 }
-
-.circle ul li.extra{
-    height: 21px;
-    width: 21px;
+.circle ul .extra{
+    position: relative;
+}
+.circle ul .extra::after{
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background: #00e0d0;
-    margin: 30px 14px;
-    margin-bottom: 60px;
-    border: 5px solid #fff;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 /* form part css goes here */
 #form-part{
@@ -609,19 +630,13 @@ ul li.active{
 }
 /* footer section css goes here */
 footer{
+    background: url(../images/footer-img.png) no-repeat center;
+    background-size: cover;
+}
 
-}
-.footer-img{
-    position: relative;
-    width: 100%;s
-}
 .footer-overlay{
     background-image: linear-gradient(to right, rgba(9, 5, 47,0.8) , rgba(49, 29, 94,0.8));
-    position: absolute;
-    top : 0;
-    left : 0;
-    width : 100%;
-    height : 99%;
+    padding: 70px 0;
 }
 .footer-main{
     display: flex;
@@ -632,7 +647,7 @@ footer{
     
 }
 .logo-about img{
-    padding-top: 55px;
+    padding-top: 45px;
     
 }
 .logo-about p{
@@ -642,7 +657,7 @@ footer{
     line-height: 26px;
     color : #fff;
     padding-top: 15px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     
 
 }
